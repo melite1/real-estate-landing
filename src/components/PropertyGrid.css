@@ -303,6 +303,41 @@
 }
 
 
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* apply to backdrop and modal */
+.property-modal-backdrop {
+  animation: modalFadeIn 0.16s ease-out;
+}
+
+.property-modal {
+  animation: modalZoomIn 0.18s ease-out;
+}
+
+
+
+
+
+
 /* ============================= */
 /* Image Slider Styles (Modal)   */
 /* ============================= */
