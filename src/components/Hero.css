@@ -1,0 +1,202 @@
+/* Section background: bg-gradient-to-br from-sky-50 to-slate-50 */
+.hero {
+  position: relative;
+  background-image:
+    linear-gradient(
+      rgba(240, 249, 255, 0.92),
+      rgba(248, 250, 252, 0.95)
+    ),
+    url("/src/assets/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/* max-w-6xl mx-auto px-4 py-10 lg:py-16 grid lg:grid-cols-2 gap-8 items-center */
+.hero-container {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .hero-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 4rem 1rem;
+  }
+}
+
+/* text-xs font-semibold text-sky-700 uppercase tracking-wide mb-2 */
+.hero-kicker {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #0369a1;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+/* text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight mb-3 */
+.hero-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+/* text-sky-600 */
+.hero-highlight {
+  color: #0284c7;
+}
+
+/* text-sm md:text-base text-slate-600 max-w-xl mb-6 */
+.hero-description {
+  font-size: 0.875rem;
+  color: #475569;
+  max-width: 36rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .hero-description {
+    font-size: 1rem;
+  }
+}
+
+/* text-xs text-slate-600 space-y-1 */
+.hero-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.75rem;
+  color: #475569;
+}
+
+.hero-list li + li {
+  margin-top: 0.25rem;
+}
+
+/* relative */
+.hero-visual {
+  position: relative;
+}
+
+/* aspect-[4/3] rounded-3xl bg-white shadow-lg border border-slate-100 overflow-hidden */
+.hero-preview-card {
+  aspect-ratio: 4 / 3;
+  border-radius: 1.5rem;
+  background-color: #ffffff;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15);
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+/* h-full w-full bg-gradient-to-br from-sky-100 via-white to-slate-100
+   flex items-center justify-center */
+.hero-preview-inner {
+  height: 100%;
+  width: 100%;
+
+  /* Image + dark overlay */
+  background-image:
+    /* linear-gradient(
+      rgba(15, 23, 42, 0.55),
+      rgba(15, 23, 42, 0.55)
+    ), */
+    url("/src/assets/properties/hero-bgg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Text block on top of the image */
+.hero-preview-text {
+  max-width: 260px;
+  max-height: 1360px;
+  padding: 0.9rem 1.2rem;
+  text-align: center;
+
+
+  background-color: rgba(15, 23, 42, 0.78);
+  border-radius: 0.9rem;
+
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.4);
+}
+
+/* Real estate listing UI */
+.hero-preview-kicker {
+  margin: 0 0 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  /* color: #bfdbfe; */
+}
+
+/* Built with React & CSS */
+.hero-preview-title {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* A smart real estate platform... */
+.hero-preview-note {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: #e5e7eb;
+}
+
+
+/* px-6 text-center */
+.hero-preview-text {
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+/* text-sm font-semibold text-sky-700 mb-1 */
+.hero-preview-kicker {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0369a1;
+  margin-bottom: 0.25rem;
+}
+
+/* text-lg font-bold text-slate-900 mb-2 */
+.hero-preview-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #b9c4dc;
+  margin-bottom: 0.5rem;
+}
+
+/* text-xs text-slate-500 */
+.hero-preview-note {
+  font-size: 0.75rem;
+  color: #b9c4dc;
+}

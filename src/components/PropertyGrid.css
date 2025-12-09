@@ -1,0 +1,341 @@
+.properties-section {
+  padding: 2.5rem 0;
+  background-color: #f8fafc;
+}
+
+.properties-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.properties-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.properties-header h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.properties-header p {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+/* Empty state */
+.properties-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  border-radius: 1rem;
+  border: 1px dashed #cbd5f5;
+  background-color: #eef2ff;
+}
+
+.properties-empty p {
+  margin: 0;
+}
+
+.properties-empty-sub {
+  margin-top: 0.35rem;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* Grid */
+.properties-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .properties-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .properties-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Card */
+.property-card {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+   transition: transform 0.18s ease-out, box-shadow 0.18s ease-out;
+}
+
+.property-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 55px rgba(15, 23, 42, 0.12);
+}
+
+.property-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.property-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.25s ease-out;
+}
+
+/* when card is hovered, zoom the image slightly */
+.property-card:hover .property-image {
+  transform: scale(1.04);
+}
+
+.property-button {
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #0284c7;
+  cursor: pointer;
+  transition: color 0.16s ease, transform 0.16s ease;
+}
+
+.property-button:hover {
+  color: #0369a1;
+  transform: translateX(2px);
+}
+
+
+.property-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.property-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.property-card:hover .property-image {
+  transform: scale(1.05);
+}
+
+.property-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  font-size: 0.625rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #0f172a;
+}
+
+/* You can tweak these colors */
+.property-badge-rent {
+  border: 1px solid #0ea5e9;
+}
+
+.property-badge-sale {
+  border: 1px solid #22c55e;
+}
+
+.property-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex: 1;
+}
+
+.property-meta {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.7rem;
+  color: #94a3b8;
+}
+
+.property-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.property-location {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.property-price {
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.property-price-period {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #64748b;
+}
+
+.property-stats {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+  font-size: 0.7rem;
+  color: #64748b;
+}
+
+.property-button {
+  margin-top: 0.75rem;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #0369a1;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.property-button:hover {
+  color: #0f172a;
+}
+
+/* Modal */
+.property-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 40;
+}
+
+.property-modal {
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.35);
+}
+
+.property-modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.6rem;
+  border: none;
+  background: rgba(15, 23, 42, 0.6);
+  color: #ffffff;
+  border-radius: 999px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.property-modal-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.property-modal-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.property-modal-tag-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.property-modal-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.property-modal-note {
+  margin-top: 0.35rem;
+  font-size: 0.78rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+.property-modal-contact {
+  margin-top: 0.75rem;
+  padding: 0.6rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #0369a1;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+}
+
+.property-modal-contact:hover {
+  background-color: #0f172a;
+}
+
+
+/* ============================= */
+/* Image Slider Styles (Modal)   */
+/* ============================= */
+
+.property-slider {
+  position: relative;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(15, 23, 42, 0.7);
+  color: #fff;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-prev {
+  left: 10px;
+}
+
+.slider-next {
+  right: 10px;
+}
+
+.slider-btn:hover {
+  background: rgba(15, 23, 42, 0.9);
+}

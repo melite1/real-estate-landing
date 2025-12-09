@@ -1,0 +1,62 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.navbar-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0.6rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #0284c7, #0ea5e9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 0.85rem;
+}
+
+.navbar-title {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.navbar-subtitle {
+  margin: 0;
+  font-size: 0.7rem;
+  color: #64748b;
+}
+
+.navbar-tagline {
+  margin: 0;
+  font-size: 0.7rem;
+  color: #94a3b8;
+}
+
+/* On small screens, hide tagline if it squeezes too much */
+@media (max-width: 640px) {
+  .navbar-tagline {
+    display: none;
+  }
+}

@@ -1,0 +1,84 @@
+.filters-section {
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #ffffff;
+}
+
+/* Center the whole group under the hero */
+.filters-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center; /* center everything as one group */
+}
+
+.filters-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-right: 0.25rem;
+}
+
+/* Shared pill styles */
+.filters-field {
+  font-size: 0.8rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid #cbd5f5;
+  background-color: #f8fafc;
+  outline: none;
+  line-height: 1.2;
+  color: #334155;
+}
+
+.filters-field:focus {
+  border-color: #0ea5e9;
+}
+
+/* ------------------------------- */
+/* Custom Select (All types)       */
+/* ------------------------------- */
+.filters-select {
+  min-width: 120px;
+  cursor: pointer;
+
+  /* remove native arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* custom arrow */
+  background-image: url("data:image/svg+xml,%3Csvg fill='none' stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 9l6 6 6-6'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center; /* arrow not pushed to the extreme */
+  background-size: 14px;
+
+  padding-right: 2.1rem; /* space for arrow */
+}
+
+/* Min/max price */
+.filters-input {
+  width: 110px;
+}
+
+/* Search field */
+.filters-search {
+  min-width: 200px;
+  flex: 1 1 auto;
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  .filters-container {
+    justify-content: flex-start;
+  }
+
+  .filters-label {
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+}
